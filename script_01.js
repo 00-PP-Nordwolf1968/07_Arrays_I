@@ -145,12 +145,19 @@ function getSentenceArr(arr) {
     const GAP = " ";
     const PUNCT = ".";
     let str = "";                // Anfangswert
+
+    // 2. Variante if-else
     
     for (let i = 0; i < arr.length; i++) {
-        str += arr[i] + GAP;
+        if (i < arr.length-1) {
+            str += arr[i] + GAP;
+        } else {
+            str += arr[i] + PUNCT;            
+        }
  }
-    // 1. Variante trim(), nimmt den leerschritt vor dem Punkt weg
-      str = str.trim() + PUNCT;
+    // 1. Variante trim(), nimmt den Leerschritt vor dem Punkt weg
+    
+    //   str = str.trim() + PUNCT;
 
     return str;
 }

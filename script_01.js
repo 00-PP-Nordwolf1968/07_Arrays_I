@@ -42,11 +42,11 @@
 
 /* 02b. For-Schleife für Array-Index (Iteration)*/
 
-let arr = ["Ich","bin","die","coole","Maxine","Mützerich"];
-for (let i = 0; i < arr.length; i++){       
-   output(i);                           // innerer Index / Schleifenindex
-   output(arr[i])                       // Array-Index --> Mapping
-}
+// let arr = ["Ich","bin","die","coole","Maxine","Mützerich"];
+// for (let i = 0; i < arr.length; i++){       
+//    output(i);                           // innerer Index / Schleifenindex
+//    output(arr[i])                       // Array-Index --> Mapping
+// }
 
 
 /**
@@ -94,6 +94,19 @@ function getSentenceArr(arr) {
     return str;
 }
 
+/*** 01b. Funktionalität mit Array 2  */
+
+// output(getSentenceArr(["Ich","bin","die","coole","Maxine","Mützerich"]));
+function getSentenceArr(arr) {
+    const GAP = " ";
+    const PUNCT = ".";
+    let str;
+
+for (let i = 0; i < arr.length; i++){       
+      output(arr[i])                       // Array-Index --> Mapping
+}
+    return str;
+}
 
 
 

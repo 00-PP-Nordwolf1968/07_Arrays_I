@@ -86,11 +86,11 @@ Solange die Variable existiert, bleibt dieser erhalten
 hier: Verkettung eines Strings // Transponierung
 */
 
-let str = ""; // Anfangswert
-for (let i = 0; i < 4; i++) {
-   str += "Test";
-   output("inhalt von str: " + str);
-}
+// let str = ""; // Anfangswert
+// for (let i = 0; i < 4; i++) {
+//    str += "Test";
+//    output("inhalt von str: " + str);
+// }
 
 
 /**
@@ -140,15 +140,18 @@ function getSentenceArr(arr) {
 
 /*** 01b. Funktionalität mit Array 2  */
 
-// output(getSentenceArr(["Ich","bin","die","coole","Maxine","Mützerich"]));
+output(getSentenceArr(["Ich","bin","die","coole","Maxine","Mützerich"]));
 function getSentenceArr(arr) {
     const GAP = " ";
     const PUNCT = ".";
-    let str;
+    let str = "";                // Anfangswert
+    
+    for (let i = 0; i < arr.length; i++) {
+        str += arr[i] + GAP;
+ }
+    // 1. Variante trim(), nimmt den leerschritt vor dem Punkt weg
+      str = str.trim() + PUNCT;
 
-for (let i = 0; i < arr.length; i++){       
-      output(arr[i])                       // Array-Index --> Mapping
-}
     return str;
 }
 

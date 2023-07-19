@@ -49,6 +49,41 @@
 // }
 
 
+/********* Überlegungen - Transponierung **********/
+
+/*
+
+1. Einer Variablen kann Ihr eigener Wert zugewiesen werden.
+Solange die Variable existiert, bleibt dieser erhalten.
+hier: Aufsummierung
+*/
+
+/* Zu "Fuß" - DRY !!! */   // DRY = Don´t Repeat Yourself
+
+// let a = 0; // Anfangswert
+// output("inhalt von a: " + a);
+// a = a + 1; // a = 0 + 1
+// output("inhalt von a: " + a);
+// a = a + 1; // a = 1 + 1
+// output("inhalt von a: " + a);
+// a = a + 1; // a = 2 + 1
+// output("inhalt von a: " + a);
+
+
+/* Besser: mit FOR-Schleife */
+
+let a = 0; // Anfangswert
+
+for (let i = 0; i < 10; i++) { 
+
+   // a = a + 1;
+
+    a += 1; // Kurzschreibweise
+
+    output("inhalt von a: " + a);
+
+}
+
 /**
  *   PRAXIS
  * 
